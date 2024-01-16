@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  
+  h3.text-primary #{title}:
+
+  if author_list.length
+    ul
+      each author in author_list
+        li
+          a(href=author.url) #{author.name}
+          |  [#{author.lifespan}]
+
+  else
+   p #[strong There are no authors.]

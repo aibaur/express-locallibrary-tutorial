@@ -1,0 +1,17 @@
+extends layout
+
+block content
+
+  h3.text-primary #{title}
+  p Welcome to #[em LocalLibrary], a very basic Express website developed as a tutorial example on the Mozilla Developer Network.
+
+  h4.text-secondary Dynamic content
+
+  p #[strong The library has the following record counts:]
+
+  ul
+    li.text-primary #[strong Books:] !{book_count}
+    li.text-secondary #[strong Copies:] !{book_instance_count}
+    li.text-success #[strong Copies available:] !{book_instance_available_count}
+    li.text-info #[strong Authors:] !{author_count}
+    li.text-info #[strong Genres:] !{genre_count}
